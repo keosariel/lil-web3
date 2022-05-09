@@ -1,6 +1,7 @@
 from urllib3 import Retry
 from brownie import (accounts, config, network, 
-                    LilVoting, LilEscrow, LilDivorce)
+                    LilVoting, LilEscrow, LilDivorce,
+                    LilMultiSigWallet)
 import os
 
 def get_account():
@@ -14,4 +15,5 @@ def main():
     account =  get_account()
     lil_voting  = LilVoting.deploy({"from": account})
     lil_escrow  = LilEscrow.deploy({"from": account})
-    lil_divorce = LilEscrow.deploy({"from": account})
+    # lil_divorce = LilDivorce.deploy({"from": account})
+    # lil_multisig_wallet = LilMultiSigWallet.deploy({"from": account})

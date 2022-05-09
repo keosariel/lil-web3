@@ -7,3 +7,5 @@ compiler:
     solc:
         remappings:
             - '@OpenZeppelin=OpenZeppelin/openzeppelin-contracts@4.6.0'
+networks:
+    default: kovan
